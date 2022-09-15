@@ -16,10 +16,9 @@ public class UserModel2UserMapper {
         if (userModel == null)
             return null;
 
-        User user = new User();
-        user.setEmail(userModel.getEmail());
-        user.setPassword(passwordEncoder.encode(userModel.getPassword()));
-
-        return user;
+        return User.builder()
+                .email(userModel.getEmail())
+                .password(passwordEncoder.encode(userModel.getPassword()))
+                .build();
     }
 }

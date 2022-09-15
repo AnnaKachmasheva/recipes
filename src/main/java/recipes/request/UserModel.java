@@ -1,10 +1,12 @@
 package recipes.request;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.*;
 
 @Data
+@Builder
 public class UserModel {
 
     @Email

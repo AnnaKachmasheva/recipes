@@ -12,11 +12,11 @@ public class UserEntity2UserMapper {
     public User toUser(UserEntity userEntity) {
         if (userEntity == null)
             return null;
-        User user = new User();
-        user.setEmail(userEntity.getEmail());
-        user.setPassword(userEntity.getPassword());
 
-        return user;
+        return User.builder()
+                .email(userEntity.getEmail())
+                .password(userEntity.getPassword())
+                .build();
     }
 
     public List<User> toUserList(List<UserEntity> userEntities) {

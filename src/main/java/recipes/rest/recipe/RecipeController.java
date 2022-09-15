@@ -1,4 +1,4 @@
-package recipes.rest;
+package recipes.rest.recipe;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
